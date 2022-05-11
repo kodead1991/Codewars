@@ -13,4 +13,4 @@ C:\Users\Professional\Documents\GitHub\Codewars\Codewars\Codewars\obj\Debug\net5
 C:\Users\Professional\Documents\GitHub\Codewars\Codewars\Codewars\obj\Debug\net5.0\Codewars.pdb
 C:\Users\Professional\Documents\GitHub\Codewars\Codewars\Codewars\obj\Debug\net5.0\Codewars.genruntimeconfig.cache
 C:\Users\Professional\Documents\GitHub\Codewars\Codewars\Codewars\obj\Debug\net5.0\ref\Codewars.dll
-C:\Users\Professional\Documents\GitHub\Codewars\Codewars\Codewars\bin\Debug\net5.0\ref\Codewars.dll
+C:\Users\Professional\Documents\GitHub\Codewars\Codewars\Codewars\obj\Debug\net5.0\refint\Codewars.dll

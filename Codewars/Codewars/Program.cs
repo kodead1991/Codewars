@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace Codewars
 {
@@ -245,7 +246,7 @@ namespace Codewars
 
             #endregion
 
-            #region Printer Errors
+            #region Printer Errors 7 kyu
 
             //In a factory a printer prints labels for boxes.
             //For one kind of boxes the printer has to use colors
@@ -274,7 +275,78 @@ namespace Codewars
             //s = "aaaxbbbbyyhwawiwjjjwwm"
             //printer_error (s) => "8/22"
 
+            //Console.WriteLine(PrinterError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz"));
+
             #endregion
+
+            #region Disemvowel Trolls 7 kyu
+
+            //Trolls are attacking your comment section!
+            //A common way to deal with this situation is
+            //to remove all of the vowels from the trolls'
+            //comments, neutralizing the threat. Your task
+            //is to write a function that takes a string
+            //and return a new string with all vowels removed.
+            //For example, the string "This website is for
+            //losers LOL!" would become "Ths wbst s fr lsrs LL!".
+            //Note: for this kata y isn't considered a vowel.
+
+            //Console.WriteLine(Disemvowel("This website is for losers LOL!"));
+            //Console.WriteLine(Disemvowel("What are you, a communist?"));
+            //Console.WriteLine(Disemvowel("No offense but,\nYour writing is among the worst I've ever read"));
+
+            #endregion
+
+            #region Twice linear 4 kyu
+
+            //Consider a sequence u where u is defined as follows:
+            //The number u(0) = 1 is the first one in u.
+            //For each x in u, then y = 2 * x + 1 and z = 3 * x + 1 must be in u too.
+            //There are no other numbers in u.
+            //Ex: u = [1, 3, 4, 7, 9, 10, 13, 15, 19, 21, 22, 27, ...]
+            //1 gives 3 and 4, then 3 gives 7 and 10, 4 gives 9 and 13, then 7 gives 15 and 22 and so on...
+
+            //Task:
+            //Given parameter n the function dbl_linear(or dblLinear...) returns the element u(n)
+            //of the ordered(with <) sequence u(so, there are no duplicates).
+
+            //Example:
+            //dbl_linear(10) should return 22
+
+            //Note: Focus attention on efficiency
+
+            //Console.WriteLine(DblLinear(10));
+            //Console.WriteLine(DblLinear(20));
+            //Console.WriteLine(DblLinear(30));
+            //Console.WriteLine(DblLinear(50));
+
+            #endregion
+        }
+
+        public static int DblLinear(int n)
+        {
+            SortedSet<int> u = new SortedSet<int> { 1 };
+
+            while (n > 0)
+            {
+                u.Add(2 * u.Min + 1);
+                u.Add(3 * u.Min + 1);
+                u.Remove(u.Min);
+                n--;
+            }
+            return u.Min;
+        }
+
+        public static string Disemvowel(string str)
+        {
+            //return Regex.Replace(str, "(?i)[aeiouy]", "",RegexOptions.IgnoreCase);
+            return string.Concat(str.Where(i => !"aeiouAEIOU".Contains(i)));
+        }
+
+        public static string PrinterError(string s)
+        {
+            // your code
+            return string.Concat(s.Count(i => i < 'a' || i > 'm'), "/", s.Length);
         }
 
         public static int Number(List<int[]> peopleListInOut)

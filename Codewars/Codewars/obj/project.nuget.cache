@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yZ+blbec+cIsgWnqPJ8TBc1hFuSPPYlDvmW1dGX5/SiNXjmjVSXBAveL+lXJfxHtYfn+5bRDqmipg1HD9qSq0A==",
+  "dgSpecHash": "oOjYAsUB7r1viUfqpypB7dgFwIhARQsE8Ef+AadA8XZDu25E1c6nDn4xmUoikKLUgaCw14Yo/0xG+n74616UBA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Professional\\Documents\\GitHub\\Codewars\\Codewars\\Codewars\\Codewars.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Professional\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
