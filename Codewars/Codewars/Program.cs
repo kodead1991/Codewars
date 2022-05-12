@@ -321,6 +321,31 @@ namespace Codewars
             //Console.WriteLine(DblLinear(50));
 
             #endregion
+
+            #region 1/n- Cycle
+
+            Console.WriteLine(Running(33) + " 2");
+            Console.WriteLine(Running(18118) + " -1");
+            Console.WriteLine(Running(69) + " 22");
+            Console.WriteLine(Running(197) + " 98");
+            Console.WriteLine(Running(65) + " -1");
+
+            #endregion
+        }
+
+        public static int Running(int n)
+        {
+            // your code
+            var val = 1;
+            var let = 0;
+            while (true)
+            {
+                if (n % 2 == 0 || n % 5 == 0) return -1;
+                val = val * 10 % n;
+                let++;
+                if (val == 1)
+                    return let;
+            }
         }
 
         public static int DblLinear(int n)
